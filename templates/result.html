@@ -6,12 +6,7 @@
   <li><a href="{{ url_for('krishna')}}">Home</a></li>
   <li><a href="{{ url_for('my_form')}}">Find LCM</a></li>
 </nav>
+
 <section class="container">
-  <h3>Welcome !</h3>
-  <p>this python flask powered app will help you to find lcm</p>
-  <p>click on the link above and</p>
-  <p>on the following page</p>
-  <p>put the numbers you want to find lcm for</p>
-  <p>numbers should be separated by comma</p>
-  <p>e.g. 20,40,60</p>
+  <p class="result">LCM = <span class="highlight">{{ result }}</span></p>
 </section>
