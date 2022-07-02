@@ -1,18 +1,7 @@
 from flask import Flask, render_template, request
+from lcm import find_lcm
 
 app = Flask(__name__)
-
-# h = max(numbers)
-def lcm(h, numbers):
-    l = h
-    for i in numbers:
-        while l%i != 0:
-            l = l+h
-
-    return l
-
-
-
 
 @app.route("/hello/")
 @app.route("/hello/<name>")
@@ -33,18 +22,12 @@ def my_form_post():
     
     for i in a_list:
         numbers.append(int(i.replace(" ", "")))
-    
-    h = max(numbers)
-    print(h)
 
-    result = lcm(lcm(h,numbers), numbers)
+    result = find_lcm(numbers)
+    
     result = str(result)
     output = "LCM : " + result
     print(output)
-    
-    print(numbers)
-    for i in numbers:
-        print(type(i))
     
     return output
 
