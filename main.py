@@ -2,6 +2,7 @@
 Hare Krishna
 May the lord Krishna bless us to enlightment
 Jai Shri Krishna
+Jai Shri Ram
 '''
 
 from flask import Flask, render_template, request
